@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.image-container {
+    width: 320px; /* half of 640px */
+    height: 240px; /* half of 480px */
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    position: absolute;
+    width: 640px;
+    height: 480px;
+    top: 0;
+    left: 0;
+}
+
+/* Greater than 1200px - top-left */
+@media (min-width: 1201px) {
+    .image-container img {
+        top: 0;
+        left: 0;
+    }
+}
+
+/* 1101px to 1200px - top-right (second image) */
+@media (min-width: 1101px) and (max-width: 1200px) {
+    .image-container img {
+        top: 0;
+        left: -320px;
+    }
+}
+
+/* 1001px to 1100px - third image on top row */
+@media (min-width: 1001px) and (max-width: 1100px) {
+    .image-container img {
+        top: 0;
+        left: -640px;
+    }
+}
+
+/* 901px to 1000px - fourth image on top row */
+@media (min-width: 901px) and (max-width: 1000px) {
+    .image-container img {
+        top: 0;
+        left: -960px;
+    }
+}
+
+/* 801px to 900px - last image on top row */
+@media (min-width: 801px) and (max-width: 900px) {
+    .image-container img {
+        top: 0;
+        left: -1280px;
+    }
+}
+
+/* 701px to 800px - first image on second row */
+@media (min-width: 701px) and (max-width: 800px) {
+    .image-container img {
+        top: -240px;
+        left: 0;
+    }
+}
+
+/* 601px to 700px - second image on second row */
+@media (min-width: 601px) and (max-width: 700px) {
+    .image-container img {
+        top: -240px;
+        left: -320px;
+    }
+}
+
+/* 501px to 600px - third image on second row */
+@media (min-width: 501px) and (max-width: 600px) {
+    .image-container img {
+        top: -240px;
+        left: -640px;
+    }
+}
+
+/* 401px to 500px - fourth image on second row */
+@media (min-width: 401px) and (max-width: 500px) {
+    .image-container img {
+        top: -240px;
+        left: -960px;
+    }
+}
+
+/* 400px or less - last image on bottom-right */
+@media (max-width: 400px) {
+    .image-container img {
+        top: -240px;
+        left: -1280px;
+    }
+}

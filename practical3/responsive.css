@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.image-container {
+    width: 625px;
+    height: 625px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    position: absolute;
+    width: 1250px;
+    height: 1250px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Greater than 1600px - top-left */
+@media (min-width: 1601px) {
+    .image-container img {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* 1401px to 1600px - top-right */
+@media (min-width: 1401px) and (max-width: 1600px) {
+    .image-container img {
+        top: 0;
+        left: -625px;
+        opacity: 1;
+    }
+}
+
+/* 1201px to 1400px - bottom-left */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .image-container img {
+        top: -625px;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* 1001px to 1200px - bottom-right */
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .image-container img {
+        top: -625px;
+        left: -625px;
+        opacity: 1;
+    }
+}
+
+/* 801px to 1000px - bottom-left */
+@media (min-width: 801px) and (max-width: 1000px) {
+    .image-container img {
+        top: -625px;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* 601px to 800px - top-right */
+@media (min-width: 601px) and (max-width: 800px) {
+    .image-container img {
+        top: 0;
+        left: -625px;
+        opacity: 1;
+    }
+}
+
+/* 600px or less - top-left */
+@media (max-width: 600px) {
+    .image-container img {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
